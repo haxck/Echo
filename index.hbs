@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta content="maximum-dpr=2" name="flexible" />
+    <meta content="modeName=750-12" name="grid" />
+	<meta charset="UTF-8">
+	<title>Letter2Someone</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script src="assets/js/flexible.js"></script>
+	<script src="assets/js/makegrid.js"></script>
+	<script src="assets/js/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+	<header>
+		<h1>Letter2Someone</h1>
+		<div class="description">
+        	<p>
+            	make litter to someone 
+        	</p>
+        </div>
+	</header>
+<div class="container">
+	<div class="col-12">
+		<p>Letter title:</p>
+		<input type="text" id="title">
+		<p>Letter Content:</p>
+		<textarea name="" rows="8" id="content"></textarea> 
+		<br><br><br>
+		<a href="javascript:submitArticle()">Ok</a>
+
+	</div>
+</div>
+<script>
+	function submitArticle(){
+		var content = $('#content').val();
+		var title = $('#title').val();
+		$.ajax({
+			url:'new_article',
+			type:'post',
+			data:{
+				'content': content,
+				'title': title 
+			},
+			success: function(data){
+				console.log('分享的url：' + location.href + 'article/' + data);
+			}
+		});
+
+	}
+</script>
+
+</body>
+</html>
