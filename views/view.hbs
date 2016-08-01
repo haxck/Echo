@@ -1,17 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="yes" name="apple-touch-fullscreen" />
-    <meta content="telephone=no,email=no" name="format-detection" />
-    <meta content="maximum-dpr=2" name="flexible" />
-    <meta content="modeName=750-12" name="grid" />
 	<meta charset="UTF-8">
 	<title>Letter for you</title>
-	<link rel="stylesheet" href="/assets/css/bootstrap.css">
 	<link rel="stylesheet" href="/assets/css/style.css">
-	<script src="/assets/js/flexible.js"></script>
-	<script src="/assets/js/makegrid.js"></script>
 
 </head>
 <body>
@@ -35,36 +27,8 @@
 	</div>
 
 <footer>
-<hr>
 	Letter2someone
 </footer>
-	<script>
-	var letterCover = document.getElementById('letterCover');
-	var letterContent = document.getElementById('letterContent');
-	var letterBtn = document.getElementById('letterBtn');
-	var letter = document.getElementById('letter');
-	// get width 
-	var c12w = document.getElementById('c12w').offsetWidth;
-	window.onload = function(){
-		letterBtn.style.borderLeft = c12w/2-6+"px solid rgba(255, 255, 255, 0)";
-		letterBtn.style.borderRight = c12w/2-6+"px solid rgba(255, 255, 255, 0)";
-	};
 
-
-	
-/*	window.onload =	function (){
-		letterCover.className = "container show";
-		letterBtn.onclick = function() {
-		letterCover.className = "container";
-		letterContent.className = "container show";
-
-	}
-	}*/
-    window.onresize = function (){
-		var c12w = document.getElementById('c12w').offsetWidth;
-		letterBtn.style.borderLeft = c12w/2-6+"px solid rgba(255, 255, 255, 0)";
-		letterBtn.style.borderRight = c12w/2-6+"px solid rgba(255, 255, 255, 0)";
-	}
-</script>
 </body>
 </html>

@@ -5,7 +5,7 @@ var hbs = require('hbs');
 var bodyParser = require('body-parser');
 
 app.set('view engine', 'hbs');  // 用hbs作为模版引擎
-app.set('views', __dirname); // 模版所在路径
+app.set('views', __dirname + '/views'); // 模版所在路径
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -16,6 +16,9 @@ app.use(express.static(__dirname + '/public'));//配置静态资源文件
 //添加一位用户
 app.get('/', function(req, res) {
 	res.render('index');
+})
+app.get('/write', function(req, res) {
+	res.render('write');
 })
 app.get('/article/:shareStr', function(req, res) {	
 	db.selectArticle({shareStr:req.params.shareStr},function(article){
