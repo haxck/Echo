@@ -40,7 +40,7 @@ app.post('/new_article', function(req, res) {
 
 //处理404
 app.use(function(req, res, next) {
-  res.status(404).send('Sorry cant find that!');
+  res.status(404).render('404');
 });
 //处理500
 app.use(function(err, req, res, next) {
