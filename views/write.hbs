@@ -1,57 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="yes" name="apple-touch-fullscreen" />
-    <meta content="telephone=no,email=no" name="format-detection" />
-    <meta content="maximum-dpr=2" name="flexible" />
-    <meta content="modeName=750-12" name="grid" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
 	<meta charset="UTF-8">
 	<title>Letter2Someone</title>
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-	<script src="assets/js/flexible.js"></script>
-	<script src="assets/js/makegrid.js"></script>
-	<script src="assets/js/jquery-2.1.4.min.js"></script>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/simditor.css">
+	<link rel="stylesheet" href="/css/animate.css">
+	<link rel="stylesheet" href="/css/sweetalert.css">
 </head>
-<body>
-	<header>
-		<h1>Letter2Someone</h1>
-		<div class="description">
-        	<p>
-            	make litter to someone 
-        	</p>
-        </div>
-	</header>
-<div class="container">
-	<div class="col-12">
-		<p>Letter title:</p>
-		<input type="text" id="title">
-		<p>Letter Content:</p>
-		<textarea name="" rows="8" id="content"></textarea> 
-		<br><br><br>
-		<a href="javascript:submitArticle()">Ok</a>
-
+<body style="background:#ed5565">
+<div class="mainBox">
+    <h2>Slow down,enjoy it</h2>
+	<div class="container">
+			<div class="box">
+				<textarea id="content"></textarea>
+				<a id="next" class="btn btn-block center-block">Next</a>
+			</div>
+			<div class="box flip out hide">
+				<div class="div0">
+					<div class="div1">
+						<input type="text" placeholder="Say somethings" autofocus id="title">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-xs-6">
+						<a id="pre" class="btn btn-block center-block">Previous</a>
+					</div>
+					<div class="col-md-6 col-xs-6">
+						<a id="make" class="btn btn-block center-block">Make</a>
+					</div>
+				</div>
+				
+				
+			</div>
 	</div>
-</div>
-<script>
-	function submitArticle(){
-		var content = $('#content').val();
-		var title = $('#title').val();
-		$.ajax({
-			url:'new_article',
-			type:'post',
-			data:{
-				'content': content,
-				'title': title 
-			},
-			success: function(data){
-				console.log('分享的url：' + location.href + 'article/' + data);
-			}
-		});
 
-	}
-</script>
+</div>
+
+		
+
+
+
+
+</div>
+<script src="/js/jquery-2.1.4.min.js"></script>
+<script src="/js/module.js"></script>
+<script src="/js/hotkeys.js"></script>
+<script src="/js/simditor.js"></script>
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/sweetalert.min.js"></script>
 
 </body>
 </html>

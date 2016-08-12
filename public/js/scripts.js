@@ -1,31 +1,84 @@
 
-jQuery(document).ready(function() {
-	
-    /*
-        Fullscreen background
-    */
-    $.backstretch("assets/img/backgrounds/2.jpg");
-    
-    /*
-        Form validation
-    */
-    $('.login-form input[type="text"], .login-form input[type="password"], .login-form textarea').on('focus', function() {
-    	$(this).removeClass('input-error');
+	var edit = new Simditor({
+		textarea: $('#content'),
+		placeholder: 'write somethings ...',
+		toolbar:[ 'bold', 'italic' ]
+	})
+
+    var eleBack = null, eleFront = null,
+    // 纸牌元素们 
+    eleList = $(".box");
+
+// 确定前面与后面元素
+    var funBackOrFront = function() {
+        eleList.each(function() {
+            if ($(this).hasClass("out")) {
+                eleBack = $(this);
+            } else {
+                eleFront = $(this);
+            }
+        });
+    };
+    funBackOrFront();
+
+
+    $("#next").bind("click", function() {
+        eleFront.addClass("out").removeClass("in");
+        setTimeout(function() {
+            eleFront.addClass("hide").removeClass("show");
+            eleBack.addClass("in").removeClass("out");
+            eleBack.addClass("show").removeClass("hide");
+            // 重新确定正反元素
+            funBackOrFront();
+        }, 225);
+        return false;
     });
-    
-    $('.login-form').on('submit', function(e) {
-    	
-    	$(this).find('input[type="text"], input[type="password"], textarea').each(function(){
-    		if( $(this).val() == "" ) {
-    			e.preventDefault();
-    			$(this).addClass('input-error');
-    		}
-    		else {
-    			$(this).removeClass('input-error');
-    		}
-    	});
-    	
+    $("#pre").bind("click", function() {
+        eleFront.addClass("out").removeClass("in");
+        setTimeout(function() {
+            eleFront.addClass("hide").removeClass("show");
+            eleBack.addClass("in").removeClass("out");
+            eleBack.addClass("show").removeClass("hide");
+            // 重新确定正反元素
+            funBackOrFront();
+        }, 225);
+        return false;
     });
-    
-    
-});
+    $("#make").bind("click", function(){
+        if($("#title").val() !== ''){
+            		var content = $('#content').val();
+                    var title = $('#title').val();
+                    $.ajax({
+                        url:'new_article',
+                        type:'post',
+                        data:{
+                            'content': content,
+                            'title': title 
+                        },
+                        success: function(data){
+                                        swal({
+                                            title: "Cool",   
+                                            text: "Url :",   
+                                            type: "input",  
+                                            closeOnConfirm: false,   
+                                            inputValue: location.host + '/article/' + data
+                                            })
+ 
+                        }
+                    });
+            
+
+
+    }else{swal({
+            title: "Error!",
+            text: "Input something,please.",
+            type: "error",   
+            confirmButtonText: "Cool" 
+            })
+
+        }
+    })
+
+    	function submitArticle(){
+
+	}

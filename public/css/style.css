@@ -46,7 +46,7 @@ a,a:hover{
 		width: 100%;
 	}
 }
-.btn{
+.main .btn{
 	width: 100%;
 	color: #fff;
     padding: .75rem 1.25rem;
@@ -57,7 +57,67 @@ a,a:hover{
     transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
     margin: 2rem 0;
 }
-.btn:hover{
+.main .btn:hover{
 	color: #ed5565;
 	background-color: #fff; 
+}
+
+/* write page */
+
+.mainBox{
+}
+.mainBox h2{
+	font:italic bold 16px/60px arial,sans-serif;
+	margin: 0;
+	height:60px;
+	text-align:center;
+	color:#fff;
+}
+.mainBox .btn{
+	width: 100%;
+	color: #fff;
+    padding: .75rem 1.25rem;
+    border: 2px solid #FFF;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
+    transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
+    margin: 2rem 0;
+}
+.mainBox .btn:hover{
+	color: #ed5565;
+	background-color: #fff; 
+}
+.box{
+
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+
+.div1 {
+    margin: 0px auto;
+    padding: 12rem 20px;
+    background: #fff;
+    position: relative;
+    border-radius: 3px;
+	text-align: center;
+	overflow: hidden;
+}
+.div0 {
+    background: -webkit-repeating-linear-gradient(45deg, #114abc, #114abc 10px, #fff 10px, #fff 20px, #bf2010 20px, #bf2010 30px, #fff 30px, #fff 40px);
+    background: repeating-linear-gradient(45deg, #114abc, #114abc 10px, #fff 10px, #fff 20px, #bf2010 20px, #bf2010 30px, #fff 30px, #fff 40px);
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 1px 2px 6px 1px rgba(76, 66, 47, 0.75);
+}
+
+.div1 input[type=text] {
+	border: none;
+	border-bottom: 2px solid #EEE;
+	outline: none;
+	font-size: 1.8em;
 }
