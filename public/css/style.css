@@ -64,8 +64,7 @@ a,a:hover{
 
 /* write page */
 
-.mainBox{
-}
+
 .mainBox h2{
 	font:italic bold 16px/60px arial,sans-serif;
 	margin: 0;
@@ -88,9 +87,7 @@ a,a:hover{
 	color: #ed5565;
 	background-color: #fff; 
 }
-.box{
 
-}
 .hide{
 	display: none;
 }
@@ -120,4 +117,17 @@ a,a:hover{
 	border-bottom: 2px solid #EEE;
 	outline: none;
 	font-size: 1.8em;
+}
+
+/* paper */
+.paper{
+	font-size: 24px;
+	line-height: 50px;
+	word-break: break-all;
+    background:
+        -webkit-linear-gradient(top, transparent 48px, #ccc 50px);
+    background-size: 100% 50px;
+}
+.paper p{
+	margin: 0 10px;
 }

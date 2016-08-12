@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+
 	<meta charset="UTF-8">
-	<title>Letter for you</title>
-	<link rel="stylesheet" href="/assets/css/style.css">
+	<title>Echo - write</title>
+	<link rel="stylesheet" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/animate.css">
 
 </head>
-<body>
+<body style="background:#ed5565">
+<div class="mainBox">
+    <h2>Slow down,enjoy it</h2>
 	<div class="container">
-	<div class="grid-wrap">
-		<div class="col-12" id="c12w">
-			<div class="letter" id="letter">
-				<div class="front">
-					<h3>{{title}}</h3>			
+		<!-- 信封 -->
+		<div class="box flip">
+			<div class="div0">
+				<div class="div1">
+					<h3>{{title}}</h3>
 				</div>
-				<div class="letterCover" id="letterBtn"></div>
 			</div>
-			
+			<a id="next" class="btn btn-block center-block">Next</a>
 		</div>
-	</div>
-	</div>
-	<div class="container" id="letterContent">
-		<div class="col-12 paper">
-			{{content}}
+		<!-- 内容 -->
+		<div class="box flip out hide">
+			<div class="paper">
+				{{{content}}}
+			</div>
 		</div>
 	</div>
 
-<footer>
-	Letter2someone
-</footer>
+</div>
+
+
+<script src="/js/jquery-2.1.4.min.js"></script>
+<script src="/js/scripts.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/sweetalert.min.js"></script>
 
 </body>
 </html>

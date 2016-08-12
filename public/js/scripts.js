@@ -1,10 +1,3 @@
-
-	var edit = new Simditor({
-		textarea: $('#content'),
-		placeholder: 'write somethings ...',
-		toolbar:[ 'bold', 'italic' ]
-	})
-
     var eleBack = null, eleFront = null,
     // 纸牌元素们 
     eleList = $(".box");

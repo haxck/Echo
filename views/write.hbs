@@ -4,7 +4,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 
 	<meta charset="UTF-8">
-	<title>Letter2Someone</title>
+	<title>Echo - write</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="/css/style.css">
 	<link rel="stylesheet" href="/css/simditor.css">
@@ -15,35 +15,31 @@
 <div class="mainBox">
     <h2>Slow down,enjoy it</h2>
 	<div class="container">
-			<div class="box">
-				<textarea id="content"></textarea>
-				<a id="next" class="btn btn-block center-block">Next</a>
-			</div>
-			<div class="box flip out hide">
-				<div class="div0">
-					<div class="div1">
-						<input type="text" placeholder="Say somethings" autofocus id="title">
-					</div>
+		<!-- 编辑器 -->
+		<div class="box">
+			<textarea id="content"></textarea>
+			<a id="next" class="btn btn-block center-block">Next</a>
+		</div>
+		<!-- 信封 -->
+		<div class="box flip out hide">
+			<div class="div0">
+				<div class="div1">
+					<input type="text" placeholder="Say somethings" autofocus id="title">
 				</div>
-				<div class="row">
-					<div class="col-md-6 col-xs-6">
-						<a id="pre" class="btn btn-block center-block">Previous</a>
-					</div>
-					<div class="col-md-6 col-xs-6">
-						<a id="make" class="btn btn-block center-block">Make</a>
-					</div>
-				</div>
-				
-				
 			</div>
+			<!-- 信封按钮 -->
+			<div class="row">
+				<div class="col-md-6 col-xs-6">
+					<a id="pre" class="btn btn-block center-block">Previous</a>
+				</div>
+				<div class="col-md-6 col-xs-6">
+					<a id="make" class="btn btn-block center-block">Make</a>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </div>
-
-		
-
-
-
 
 </div>
 <script src="/js/jquery-2.1.4.min.js"></script>
@@ -53,6 +49,14 @@
 <script src="/js/scripts.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script src="/js/sweetalert.min.js"></script>
+<script>
+	// 编辑器初始化
+	var edit = new Simditor({
+	textarea: $('#content'),
+	placeholder: 'write somethings ...',
+	toolbar:[ 'bold', 'italic' ]
+	})
+</script>
 
 </body>
 </html>
