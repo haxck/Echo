@@ -50,13 +50,11 @@
                         },
                         success: function(data){
                                         swal({
-                                            title: "Cool",   
-                                            text: "Url :",   
-                                            type: "input",  
-                                            closeOnConfirm: false,   
-                                            inputValue: location.host + '/article/' + data
+                                            title: "Copy the following address",   
+                                            text:  location.host + '/article/' + data,   
+                                            type: "success",  
+                                            closeOnConfirm: false
                                             })
- 
                         }
                     });
             
@@ -71,7 +69,3 @@
 
         }
     })
-
-    	function submitArticle(){
-
-	}
