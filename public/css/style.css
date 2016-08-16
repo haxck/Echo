@@ -64,7 +64,9 @@ a,a:hover{
 
 /* write page */
 
-
+.mainBox{
+	min-height: 100vh;
+}
 .mainBox h2{
 	font:italic bold 16px/60px arial,sans-serif;
 	margin: 0;
@@ -130,4 +132,13 @@ a,a:hover{
 }
 .paper p{
 	margin: 0 10px;
+}
+
+/* footer */
+footer{
+	text-align: center;
+	padding: 8px;
+}
+footer a{
+	color: #FFF;
 }
