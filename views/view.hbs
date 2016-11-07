@@ -1,42 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	<meta charset="UTF-8">
-	<title>Echo - Letter</title>
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/animate.css">
+{{> header}}
 
-</head>
-<body style="background:#ed5565">
-<div class="mainBox">
-    <h2>Slow down,enjoy it</h2>
-	<div class="container">
-		<!-- 信封 -->
-		<div class="box flip">
-			<div class="div0">
-				<div class="div1">
-					<h3>{{title}}</h3>
-				</div>
-			</div>
-			<a id="next" class="btn btn-block center-block">Next</a>
-		</div>
-		<!-- 内容 -->
-		<div class="box flip out hide">
-			<div class="paper">
-				{{{content}}}
-			</div>
-		</div>
-	</div>
-
+<div class="topbar"></div>
+<div class="paper">
+	{{{content}}}
 </div>
-<footer>
-	<a href="/write">Write a letter to some</a>
-</footer>
+</div>
 
-<script src="/js/jquery-2.1.4.min.js"></script>
-<script src="/js/scripts.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/sweetalert.min.js"></script>
 {{> footer}}

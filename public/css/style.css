@@ -92,6 +92,24 @@ a,a:hover{
 	background: #FFF;
 	color: #65b895
 }
+
+/* view */
+.topbar{
+    background: repeating-linear-gradient(45deg, rgb(38, 166, 209), rgb(38, 166, 209) 10px, rgb(255, 255, 255) 10px, rgb(255, 255, 255) 20px, rgb(226, 87, 76) 20px, rgb(226, 87, 76) 30px, rgb(255, 255, 255) 30px, rgb(255, 255, 255) 40px);
+    padding-top: 10px;
+}
+.paper{
+	font-size: 2.2em;
+	line-height: 1.6em;
+	word-break: break-all;
+  background:
+        -webkit-linear-gradient(top, transparent 48px, #FFF 50px);
+  background-size: 100% 50px;
+	background: #fbf7ed;
+	color: #635752;
+	text-indent: 2.2em;
+	letter-spacing: 0.05em;
+}
 /* Footer */
 footer{
 	font: 400 2em/1.5em "Fira Sans", serif;
