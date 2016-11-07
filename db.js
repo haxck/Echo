@@ -11,10 +11,9 @@ var db;
 // exports.article = db.model('article', articleScheMa); //  与article集合关联
 
 
-//数据库 island
-
+// Insert Letter
 exports.newArticle = function(data,callback) {
-	console.log('添加数据' + data);
+
 	connect_db(function(err,db){
 		this.db = db;
 		var collection = db.collection(collectionName);
@@ -32,6 +31,7 @@ exports.newArticle = function(data,callback) {
 	
 };
 
+// Select Letter
 exports.selectArticle = function(whereStr,callback) {  
 
 	connect_db(function(err,db){
@@ -42,7 +42,6 @@ exports.selectArticle = function(whereStr,callback) {
 				console.log('Error:'+ err);
 				return;
 			}
-			console.log('查询数据' + result[0]);   
 			callback(result[0]);
 			db.close();
 		});		

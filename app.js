@@ -1,11 +1,16 @@
 var express = require('express');
 var app = express();
 var db = require('./db.js');
-var hbs = require('hbs');
+var hbs = require('express-handlebars');
 var bodyParser = require('body-parser');
 
+app.engine('hbs', hbs({
+  layoutsDir: 'views',
+  defaultLayout: 'layout',
+  extname: '.hbs'
+}));
 app.set('view engine', 'hbs');  // 用hbs作为模版引擎
-app.set('views', __dirname + '/views'); // 模版所在路径
+
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
@@ -22,21 +27,21 @@ app.get('/write', function(req, res) {
 })
 app.get('/article/:shareStr', function(req, res) {	
 	db.selectArticle({shareStr:req.params.shareStr},function(article){
-		console.log('select: ' + JSON.stringify(article));
-		console.log(article.title + '---' + article.content);
+		console.log('Select:' + article.shareStr);
 		res.render('view',article);		
 	});
 })
 app.post('/new_article', function(req, res) {
 	var str = "";
-
 	str = generateStr();
-	console.log('生成随机字符串');
+	console.log('GenerateUrl : ' + str);
 	db.newArticle({shareStr:str,title:req.body.title,content:req.body.content});				
 	res.send(str);
 	//res.render('view',{'title':'sd','content':'sdsss'});
 })
-
+app.get('/t',function(req,res){
+	res.render('test')
+})
 
 //处理404
 app.use(function(req, res, next) {
@@ -51,7 +56,7 @@ app.use(function(err, req, res, next) {
 var server = app.listen(80, function() {
 	var host = server.address().address
 	var port = server.address().port
-	console.log(" app listening at http://%s:%s", host, port)
+	console.log(" Echo is Up : http://%s:%s", host, port)
 
 });
 

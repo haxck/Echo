@@ -1,21 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	<title>Echo | write a letter for someone</title>
-	<link rel="stylesheet" href="/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style.css">
-</head>
-<body style="background:#ed5565">
+{{> header}}
 <div class="main">
-		<div class="words">
-			<h1>Echo </h1>
-			<p>Write a letter for someone.</p>
-		</div>
-		<div class="try">
-			<a href="/write" class="btn">Try</a>
-		</div>
+	<div class="logo">
+		<h1>Echo</h1>
+		<p>This for you</p>
+	</div>
+	<div class="container">
+		<img src="letter.svg" alt="" height="160px">
+		<p>以书信的形式</p>
+		<p>让文字</p>
+		<p>回归本真</p>
+		<a href="/write">Try</a>
+	</div>
 </div>
-</body>
-</html>
+{{> footer}}

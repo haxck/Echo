@@ -49,12 +49,20 @@
                             'title': title 
                         },
                         success: function(data){
-                                        swal({
-                                            title: "Copy the following address",   
-                                            text:  location.host + '/article/' + data,   
-                                            type: "success",  
-                                            closeOnConfirm: false
-                                            })
+                                        // swal({
+                                        //     title: "Copy the following address",   
+                                        //     text:  "<span id='add'>" + location.host + '/article/' + data + "</span> <a href = '#' id='d_clip_button' data-clipboard-target='add'>copy</a>",   
+                                        //     type: "success",  
+                                        //     closeOnConfirm: false,
+                                        //     html: true
+                                        //     },(function(){
+                                                
+                                        //         new ZeroClipboard( document.getElementById("d_clip_button"), {
+                                        //                     moviePath: "ZeroClipboard.swf"
+                                        //                 } );
+                                                
+                                        //     })())
+                                            swal({   title: "Ajax request example",   text: "Submit to run ajax request",   type: "info",   showCancelButton: true,   closeOnConfirm: false,   showLoaderOnConfirm: true, }, function(){   setTimeout(function(){     swal("Ajax request finished!");   }, 2000); });
                         }
                     });
             

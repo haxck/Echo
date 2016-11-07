@@ -3,7 +3,7 @@
 
 body{
 	font-family: 'Source Sans Pro';
-	font-size: 16px;
+	font-size: 10px;
 }
 h1{
 	font-size: 2.8em;
@@ -13,20 +13,100 @@ h2{
 }
 a,a:hover{
 	text-decoration: none;
-	color: #000000;
+
 }
-/* index style */
+
+@font-face {
+  font-family: 'Cardo';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Cardo"), local("Cardo-Regular"),  url("//oerfykrpf.bkt.clouddn.com/Cardo-Regular.ttf") format("truetype"), url("//oerfykrpf.bkt.clouddn.com/Cardo-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Fira Sans"), local("FiraSans-Regular"), url("//oerfykrpf.bkt.clouddn.com/FiraSans-Regular.ttf") format("truetype"), url("//oerfykrpf.bkt.clouddn.com/FiraSans-Regular.ttf") format("truetype"); }
+@font-face {font-family: 'webfont';
+  src: url('//at.alicdn.com/t/7r066js2y2j1nhfr.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/7r066js2y2j1nhfr.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/7r066js2y2j1nhfr.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/7r066js2y2j1nhfr.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/7r066js2y2j1nhfr.svg#NotoSansHans-DemiLight') format('svg'); /* iOS 4.1- */
+}
+
+
+/* index */
 .main{
-	color: #FFF;
-	width: 100vw;
-	height: 100vh;
-	padding: 3em;
+	color: #000000;
+	width: 100%;
 	display: flex;
-	justify-content: center;
-	align-items: center;
+	justify-content: flex-start;
 	flex-direction: column;
 }
-.words{
+.logo{
+	width: 100%;
+	height: 33.33vh;
+	color: #fff;
+	background: #65b895;
+	padding-top: 11.11vh;
+	text-align: center;
+	font: 400 2em/1.5em "Fira Sans", serif;
+  box-shadow: 0px 3px 25px #888888;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	margin-top: 3px;
+	width: 92vw;
+	text-align: center;
+	align-self: center;
+	font: 400 2em/1.5em "Fira Sans", serif;
+	border-left: 1px #ccc solid;
+	border-right: 1px #ccc solid;
+	border-bottom: 1px #ccc solid;
+	box-shadow: 0px 3px 10px #ccc;
+	font: 400 2em/1.5em "webfont"
+}
+.container a{
+	align-items: flex-end;
+	background: #65b895;
+	padding: 8px;
+	color: #FFF;
+}
+
+/* write */
+.btn{
+	margin: 20px auto;
+	width: 90%;
+	align-items: flex-end;
+	background: #65b895;
+	padding: 8px;
+	color: #FFF;
+	border: 2px #65b895 solid;
+	    transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
+    transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
+
+}
+.btn:hover{
+	border: 2px #65b895 solid;
+	background: #FFF;
+	color: #65b895
+}
+/* Footer */
+footer{
+	font: 400 2em/1.5em "Fira Sans", serif;
+	text-align: center;
+	margin: 20px;
+	padding: 8px;
+	font:600 1.4em/0em "Cardo"
+}
+footer a{
+	color: #FFF;
+}
+
+
+
+/*.words{
 	max-width: 768px;
 	display: flex;
 	flex-direction: column;
@@ -46,11 +126,11 @@ a,a:hover{
 		width: 100%;
 	}
 }
-.main .btn{
+/*.main .btn{
 	width: 100%;
-	color: #fff;
+	color: #000;
     padding: .75rem 1.25rem;
-    border: 2px solid #fff;
+    border: 2px solid #65b895;
     border-radius: 4px;
     text-decoration: none;
     transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
@@ -58,13 +138,13 @@ a,a:hover{
     margin: 2rem 0;
 }
 .main .btn:hover{
-	color: #ed5565;
-	background-color: #fff; 
-}
+	color: #EEE;
+	background-color: #65b895; 
+}*/
 
 /* write page */
 
-.mainBox{
+/*.mainBox{
 	min-height: 100vh;
 }
 .mainBox h2{
@@ -121,7 +201,7 @@ a,a:hover{
 	font-size: 1.8em;
 }
 
-/* paper */
+
 .paper{
 	font-size: 24px;
 	line-height: 50px;
@@ -134,11 +214,4 @@ a,a:hover{
 	margin: 0 10px;
 }
 
-/* footer */
-footer{
-	text-align: center;
-	padding: 8px;
-}
-footer a{
-	color: #FFF;
-}
+ footer */
