@@ -4,7 +4,6 @@ $("#make").bind("click", function(){
                 $.ajax({
                     url:'nl',
                     type:'post',
-                    async:'false',
                     data:{
                         'content': content
                     },
@@ -16,12 +15,6 @@ $("#make").bind("click", function(){
                                         closeOnConfirm: false,
                                         html: true
                                         })
-                    },
-                    error: function(){
-                        swal({
-                        title: "God!服务器好像出了点问题",
-                        type: "error"
-                        })
                     }
                 });
     }else{swal({

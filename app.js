@@ -36,7 +36,7 @@ app.post('/nl', function(req, res) {
 	str = generateStr();
 	console.log('GenerateUrl : ' + str);
 	db.newArticle({shareStr:str,title:req.body.title,content:req.body.content});			
-
+	res.send(str);
 	//res.render('view',{'title':'sd','content':'sdsss'});
 })
 
