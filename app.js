@@ -25,23 +25,21 @@ app.get('/', function(req, res) {
 app.get('/write', function(req, res) {
 	res.render('write');
 })
-app.get('/article/:shareStr', function(req, res) {	
+app.get('/l/:shareStr', function(req, res) {	
 	db.selectArticle({shareStr:req.params.shareStr},function(article){
 		console.log('Select:' + article.shareStr);
 		res.render('view',article);		
 	});
 })
-app.post('/new_article', function(req, res) {
+app.post('/nl', function(req, res) {
 	var str = "";
 	str = generateStr();
 	console.log('GenerateUrl : ' + str);
-	db.newArticle({shareStr:str,title:req.body.title,content:req.body.content});				
-	res.send(str);
+	db.newArticle({shareStr:str,title:req.body.title,content:req.body.content});			
+
 	//res.render('view',{'title':'sd','content':'sdsss'});
 })
-app.get('/t',function(req,res){
-	res.render('test')
-})
+
 
 //处理404
 app.use(function(req, res, next) {
@@ -53,7 +51,7 @@ app.use(function(err, req, res, next) {
   res.status(500).send('Something broke!');
 });
 //创建server
-var server = app.listen(80, function() {
+var server = app.listen(8088, function() {
 	var host = server.address().address
 	var port = server.address().port
 	console.log(" Echo is Up : http://%s:%s", host, port)
@@ -64,7 +62,7 @@ var server = app.listen(80, function() {
 function generateStr(){
 	var dataArr = new Array();
 	for(var i=0;i<26;i++){
-		dataArr.push(String.fromCharCode('A'.charCodeAt() + i));
+		dataArr.push(String.fromCharCode('a'.charCodeAt() + i));
 	}
 	for(var i=0;i<10;i++){
 		dataArr.push(i+'');

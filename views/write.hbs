@@ -1,38 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-	<meta charset="UTF-8">
-	<title>Echo - Write</title>
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="/css/style.css">
-	<link rel="stylesheet" href="/css/simditor.css">
-	<link rel="stylesheet" href="/css/animate.css">
-	<link rel="stylesheet" href="/css/sweetalert.css">
-</head>
-<body>
-<!--<div class="mainBox">
-
-	<div class="box">
-		
-		<a id="next" class="btn btn-block center-block">生成</a>
-	</div>
-</div>-->
+{{> header}}
 <div class="main">
 <textarea id="content"></textarea>
-	<a id="make" class="btn">生成</a>
+	<a href="#" id="make" class="btn">生成</a>
 </div>
 
-
-</div>
+<link rel="stylesheet" href="/css/simditor.css">
+<link rel="stylesheet" href="/css/sweetalert.css">
 <script src="/js/jquery-2.1.4.min.js"></script>
 <script src="/js/module.js"></script>
 <script src="/js/hotkeys.js"></script>
 <script src="/js/simditor.js"></script>
 <script src="/js/scripts.js"></script>
-<script src="/js/bootstrap.min.js"></script>
 <script src="/js/sweetalert.min.js"></script>
-<script src="/js/ZeroClipboard.min.js"></script>
 
 <script>
 	// 编辑器初始化
@@ -41,10 +20,5 @@
 	placeholder: 'write somethings ...',
 	toolbar:[ 'bold', 'italic' ],
 	})
-
-
-
 </script>
-
-</body>
-</html>
+{{> footer}}

@@ -5,17 +5,13 @@ body{
 	font-family: 'Source Sans Pro';
 	font-size: 10px;
 }
-h1{
-	font-size: 2.8em;
-}
-h2{
-	font-size: 1.2em; 
+.nfp{
+	font-size: 15em;
 }
 a,a:hover{
 	text-decoration: none;
-
+	color: #65b895;
 }
-
 @font-face {
   font-family: 'Cardo';
   font-style: normal;
@@ -42,6 +38,8 @@ a,a:hover{
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
+	min-height: 90vh;
+
 }
 .logo{
 	width: 100%;
@@ -78,14 +76,15 @@ a,a:hover{
 .btn{
 	margin: 20px auto;
 	width: 90%;
-	align-items: flex-end;
-	background: #65b895;
+	text-align: center;
 	padding: 8px;
+	background: #65b895;
 	color: #FFF;
 	border: 2px #65b895 solid;
-	    transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
-    transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
-
+	transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
+  transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
+	border-radius: 3px;
+	
 }
 .btn:hover{
 	border: 2px #65b895 solid;
@@ -96,19 +95,20 @@ a,a:hover{
 /* view */
 .topbar{
     background: repeating-linear-gradient(45deg, rgb(38, 166, 209), rgb(38, 166, 209) 10px, rgb(255, 255, 255) 10px, rgb(255, 255, 255) 20px, rgb(226, 87, 76) 20px, rgb(226, 87, 76) 30px, rgb(255, 255, 255) 30px, rgb(255, 255, 255) 40px);
-    padding-top: 10px;
+    padding-top: 1em;
 }
 .paper{
+	padding: 1em 0em;
 	font-size: 2.2em;
-	line-height: 1.6em;
 	word-break: break-all;
-  background:
-        -webkit-linear-gradient(top, transparent 48px, #FFF 50px);
-  background-size: 100% 50px;
 	background: #fbf7ed;
 	color: #635752;
 	text-indent: 2.2em;
 	letter-spacing: 0.05em;
+}
+.paper p{
+	margin: 0;
+	line-height: 1.6em;
 }
 /* Footer */
 footer{
@@ -116,120 +116,8 @@ footer{
 	text-align: center;
 	margin: 20px;
 	padding: 8px;
-	font:600 1.4em/0em "Cardo"
+	font:600 1.4em/0em "Cardo";
 }
 footer a{
 	color: #FFF;
 }
-
-
-
-/*.words{
-	max-width: 768px;
-	display: flex;
-	flex-direction: column;
-	align-self: flex-start;
-}
-@media screen and (min-width: 768px){
-	.words{
-		display: flex;
-		flex-direction: column;
-		align-self: center;
-	}
-}
-@media screen and (max-width:768px){
-	.try{
-		width: 768px;
-		display: flex;
-		width: 100%;
-	}
-}
-/*.main .btn{
-	width: 100%;
-	color: #000;
-    padding: .75rem 1.25rem;
-    border: 2px solid #65b895;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
-    transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
-    margin: 2rem 0;
-}
-.main .btn:hover{
-	color: #EEE;
-	background-color: #65b895; 
-}*/
-
-/* write page */
-
-/*.mainBox{
-	min-height: 100vh;
-}
-.mainBox h2{
-	font:italic bold 16px/60px arial,sans-serif;
-	margin: 0;
-	height:60px;
-	text-align:center;
-	color:#fff;
-}
-.mainBox .btn{
-	width: 100%;
-	color: #fff;
-    padding: .75rem 1.25rem;
-    border: 2px solid #FFF;
-    border-radius: 4px;
-    text-decoration: none;
-    transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
-    transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
-    margin: 2rem 0;
-}
-.mainBox .btn:hover{
-	color: #ed5565;
-	background-color: #fff; 
-}
-
-.hide{
-	display: none;
-}
-.show{
-	display: block;
-}
-
-.div1 {
-    margin: 0px auto;
-    padding: 12rem 20px;
-    background: #fff;
-    position: relative;
-    border-radius: 3px;
-	text-align: center;
-	overflow: hidden;
-}
-.div0 {
-    background: -webkit-repeating-linear-gradient(45deg, #114abc, #114abc 10px, #fff 10px, #fff 20px, #bf2010 20px, #bf2010 30px, #fff 30px, #fff 40px);
-    background: repeating-linear-gradient(45deg, #114abc, #114abc 10px, #fff 10px, #fff 20px, #bf2010 20px, #bf2010 30px, #fff 30px, #fff 40px);
-    padding: 8px;
-    border-radius: 6px;
-    box-shadow: 1px 2px 6px 1px rgba(76, 66, 47, 0.75);
-}
-
-.div1 input[type=text] {
-	border: none;
-	border-bottom: 2px solid #EEE;
-	outline: none;
-	font-size: 1.8em;
-}
-
-
-.paper{
-	font-size: 24px;
-	line-height: 50px;
-	word-break: break-all;
-    background:
-        -webkit-linear-gradient(top, transparent 48px, #ccc 50px);
-    background-size: 100% 50px;
-}
-.paper p{
-	margin: 0 10px;
-}
-
- footer */

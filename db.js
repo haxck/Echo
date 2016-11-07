@@ -1,5 +1,5 @@
 var mongoClient = require('mongodb').MongoClient;
-var conn_str = 'mongodb://localhost:27017/island';
+var conn_str = 'mongodb://localhost:27017/echo';
 var collectionName = 'article';
 var db;
 // var Schema = mongoose.Schema;   //  创建模型
