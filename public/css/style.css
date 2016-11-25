@@ -85,7 +85,7 @@ a,a:hover{
 	transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
   transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
 	border-radius: 3px;
-	
+
 }
 .btn:hover{
 	border: 2px #65b895 solid;
@@ -110,6 +110,11 @@ a,a:hover{
 .paper p{
 	margin: 0;
 	line-height: 1.6em;
+}
+.paper hr{
+	width:95vw;
+	border:none;
+	border-top:2px dashed #E0E0E0;
 }
 /* Footer */
 footer{
