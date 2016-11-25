@@ -100,11 +100,11 @@ a,a:hover{
 }
 .paper{
 	padding: 1em .5em;
-	font-size: 2.2em;
+	font-size: 1.8em;
 	word-break: break-all;
 	background: #fbf7ed;
 	color: #635752;
-	text-indent: 2.2em;
+	text-indent: 2em;
 	letter-spacing: 0.05em;
 }
 .paper p{
@@ -113,7 +113,6 @@ a,a:hover{
 }
 /* Footer */
 footer{
-	font: 400 2em/1.5em "Fira Sans", serif;
 	text-align: center;
 	margin: 20px;
 	padding: 8px;
