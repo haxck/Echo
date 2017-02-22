@@ -1,0 +1,10 @@
+{
+  "url":"http://localhost:8088",
+  "server":{
+    "host":"127.0.0.1",
+    "port":8088
+  },
+  "database":{
+    "url":"mongodb://localhost:27017/echo"
+  }
+}
