@@ -10,7 +10,7 @@ $("#make").bind("click", function(){
                     success: function(data){
                                     swal({
                                         title: "好啦~复制下面的地址",
-                                        text:  "<a href=http://" + location.host + '/l/' + data + ">" + location.host + '/l/' + data + "</a>",
+                                        text:  "<a class=\"cpt\" href=\"#\" data-clipboard-text=http://" + location.host + '/l/' + data + ">" + location.host + '/l/' + data + "</a>",
                                         type: "success",
                                         closeOnConfirm: false,
                                         showConfirmButton: false,

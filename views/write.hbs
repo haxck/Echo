@@ -12,6 +12,7 @@
 <script src="/js/simditor.js"></script>
 <script src="/js/scripts.js"></script>
 <script src="/js/sweetalert.min.js"></script>
+<script src="/js/clipboard.min.js"></script>
 
 <script>
 	// 编辑器初始化
@@ -22,5 +23,6 @@
 	toolbar:[ 'bold', 'italic', 'hr' ],
 	allowedTags:['br','p','b']
 	})
+	new Clipboard('.cpt')
 </script>
 {{> footer}}
