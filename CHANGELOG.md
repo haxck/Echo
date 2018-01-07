@@ -1,7 +1,8 @@
 ## Change log
 
 ### v1.2
-- [] RESTful API
+- [ ] RESTful API
+- [ ] React.js
 
 ### v1.1
 真实还原书信风格
