@@ -7,7 +7,7 @@
   "author": "Zhiqiang Du <haxck.x@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "webpack"
+    "start": "webpack --config ./config/webpack.config.js"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
