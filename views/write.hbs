@@ -1,6 +1,7 @@
 {{> header}}
 <div class="main">
-<textarea id="content"></textarea>
+	<div class="topbar"></div>
+	<textarea id="content" placeholder=""></textarea>
 	<a href="#" id="make" class="btn">生成</a>
 </div>
 
@@ -17,12 +18,13 @@
 <script>
 	// 编辑器初始化
 	var edit = new Simditor({
-	textarea: $('#content'),
-	placeholder: 'write somethings ...',
-	cleanPaste:true,
-	toolbar:[ 'bold', 'italic', 'hr' ],
-	allowedTags:['br','p','b']
+		textarea: $('#content'),
+		placeholder: "身在何处,心系何方?",
+		cleanPaste: true,
+		toolbar: ['bold', 'italic', 'hr'],
+		allowedTags: ['br', 'p', 'b']
 	})
 	new Clipboard('.cpt')
+
 </script>
 {{> footer}}

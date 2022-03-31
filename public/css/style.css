@@ -39,7 +39,8 @@ a,a:hover{
 	display: flex;
 	justify-content: flex-start;
 	flex-direction: column;
-	min-height: 90vh;
+	min-height: 100vh;
+	background: #fbf7ed;
 
 }
 .logo{
@@ -59,6 +60,7 @@ a,a:hover{
 	width: 92vw;
 	text-align: center;
 	align-self: center;
+	padding: 0 14px;
 	font: 400 2em/1.5em "Fira Sans", serif;
 	border-left: 1px #ccc solid;
 	border-right: 1px #ccc solid;
@@ -79,8 +81,8 @@ a,a:hover{
 	width: 90%;
 	text-align: center;
 	padding: 8px;
-	background: #65b895;
-	color: #FFF;
+	background: #fff;
+	color: #65b895;
 	border: 2px #65b895 solid;
 	transition: -webkit-transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
   transition: transform .1s ease-out, border .1s ease-out, background-color .15s ease-out, color .1s ease-out;
@@ -89,8 +91,8 @@ a,a:hover{
 }
 .btn:hover{
 	border: 2px #65b895 solid;
-	background: #FFF;
-	color: #65b895
+	background: #65b895;
+	color: #fff;
 }
 
 /* view */
@@ -99,7 +101,9 @@ a,a:hover{
     padding-top: 1em;
 }
 .paper{
+	box-sizing: border-box;
 	padding: 1em .5em;
+	min-height: 100vh;
 	font-size: 1.8em;
 	word-break: break-all;
 	background: #fbf7ed;
@@ -118,9 +122,13 @@ a,a:hover{
 }
 /* Footer */
 footer{
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background: #fbf7ed;
 	text-align: center;
-	margin: 20px;
-	padding: 8px;
+	padding: 14px;
 	font:600 1.4em/0em "Cardo";
 }
 footer a{

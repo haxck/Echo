@@ -145,11 +145,11 @@
 
 .simditor {
   position: relative;
-  border: 1px solid #c9d8db;
+  /* border: 1px solid #c9d8db; */
 }
 .simditor .simditor-wrapper {
   position: relative;
-  background: #ffffff;
+  background: #fbf7ed;
 }
 .simditor .simditor-wrapper > textarea {
   display: none !important;
@@ -717,6 +717,9 @@
   border-top: 1px solid #ccc;
   margin: 15px 0;
   padding: 0;
+  width:95vw;
+	border:none;
+	border-top:2px dashed #E0E0E0;
 }
 .simditor .simditor-body table, .editor-style table {
   width: 100%;

@@ -40,7 +40,8 @@ exports.selectArticle = function(whereStr,callback) {
 		collection.find(whereStr).toArray(function(err, result) {
 			if(err){
 				console.log('Error:'+ err);
-				return;
+				callback(err)
+				db.close();
 			}
 			callback(result[0]);
 			db.close();
@@ -57,7 +58,7 @@ exports.exist = function(whereStr,callback){
 			if(err){
 				console.log('Error:'+ err);
 				return;
-			}     
+			}
 			db.close();
 			if (result.length > 0) {
 				callback(true);

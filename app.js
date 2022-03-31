@@ -27,8 +27,12 @@ app.get('/write', function(req, res) {
 })
 app.get('/l/:shareStr', function(req, res) {	
 	db.selectArticle({shareStr:req.params.shareStr},function(article){
-		console.log('Select:' + article.shareStr);
-		res.render('view',article);		
+		if(typeof article === "undefined"){
+			res.redirect("/404")
+		}else{
+			console.log('Select:' + article.shareStr);
+			res.render('view',article);
+		}
 	});
 })
 app.post('/nl', function(req, res) {
