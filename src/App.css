@@ -1,42 +1,38 @@
 #root {
   max-width: 1280px;
+  overflow: hidden;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.topbar {
+  background: repeating-linear-gradient(45deg, rgb(38, 166, 209), rgb(38, 166, 209) 10px, rgb(255, 255, 255) 10px, rgb(255, 255, 255) 20px, rgb(226, 87, 76) 20px, rgb(226, 87, 76) 30px, rgb(255, 255, 255) 30px, rgb(255, 255, 255) 40px);
+  padding-top: 1em;
+}
+
+.paper {
+  min-width: 100vw;
+  box-sizing: border-box;
+  padding: 1em .5em;
+  min-height: 100vh;
+  font-size: 1.8em;
+  word-break: break-all;
+  background: #fbf7ed;
+  color: #635752;
+  text-indent: 2em;
+  letter-spacing: 0.05em;
+}
+
+.paper p {
+  margin: 0;
+  line-height: 1.6em;
+}
+
+.paper hr {
+  width: 95vw;
+  border: none;
+  border-top: 2px dashed #E0E0E0;
 }
