@@ -1,38 +1,19 @@
-#root {
-  max-width: 1280px;
-  overflow: hidden;
-  margin: 0 auto;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+footer {
+  padding: 1rem 0;
 }
 
-.read-the-docs {
+footer p {
+  text-align: center;
   color: #888;
+  font-size:small;
 }
-
-.topbar {
-  background: repeating-linear-gradient(45deg, rgb(38, 166, 209), rgb(38, 166, 209) 10px, rgb(255, 255, 255) 10px, rgb(255, 255, 255) 20px, rgb(226, 87, 76) 20px, rgb(226, 87, 76) 30px, rgb(255, 255, 255) 30px, rgb(255, 255, 255) 40px);
-  padding-top: 1em;
-}
-
-.paper {
-  min-width: 100vw;
-  box-sizing: border-box;
-  padding: 1em .5em;
-  min-height: 100vh;
-  font-size: 1.8em;
-  word-break: break-all;
-  background: #fbf7ed;
-  color: #635752;
-  text-indent: 2em;
-  letter-spacing: 0.05em;
-}
-
-.paper p {
-  margin: 0;
-  line-height: 1.6em;
-}
-
-.paper hr {
-  width: 95vw;
-  border: none;
-  border-top: 2px dashed #E0E0E0;
+.seal {
+  background: linear-gradient(135deg, red 50%, blue 50%);
+  height: 50px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
