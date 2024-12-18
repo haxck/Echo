@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
   useRouteError,
+  HashRouter,createHashRouter
 } from "react-router-dom";
 
 import Root from './routers/root'
@@ -12,13 +13,13 @@ import Letter from './routers/letter'
 import './index.css'
 import ErrorPage from './routers/errorPage';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Root />,
   },
   {
-    path: "letters/:letterId",
+    path: "s/:letterId",
     element: <Letter />,
     errorElement: <ErrorPage />
   },
