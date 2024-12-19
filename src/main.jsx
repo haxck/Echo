@@ -1,14 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { RouterProvider, createHashRouter } from "react-router-dom";
 
-import {
-  createBrowserRouter,
-  RouterProvider,
-  useRouteError,
-  HashRouter,createHashRouter
-} from "react-router-dom";
-
-import Root from './routers/root'
+import Root from './App'
 import Letter from './routers/letter'
 import './index.css'
 import ErrorPage from './routers/errorPage';
@@ -27,6 +21,6 @@ const router = createHashRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router} ></RouterProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

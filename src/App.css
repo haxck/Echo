@@ -1,3 +1,4 @@
+@import url('https://static.zeoseven.com/zsft/440/main/result.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -40,4 +41,16 @@ footer p {
 .state-title {
   color: #999;
   text-transform: uppercase;
+}
+
+.bg{
+  
+  background:linear-gradient(rgba(57, 48, 246, 0.5) 25%, rgba(30, 45, 211, 0.5) 66%, rgba(112, 23, 255, 0.5) 100%), rgba(217, 217, 217, 0.5);
+}
+
+
+
+body {
+   font-family: "Huiwen-Fangsong";
+   font-weight: normal;
 }

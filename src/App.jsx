@@ -1,19 +1,22 @@
 import { useState } from 'react'
-
 import './App.css'
+import Wishlist from './components/wishlist'
 
 function App() {
-  const [code,setCode] = useState(null)
-
-  const onAction = () => {
-    alert(code);
-  }
   return (
-    <>
-    <div className='bg-gray-100'>
-      <h1>Echo</h1>
-    </div>
-    </>
+
+    <section>
+      <div class="max-w-screen-sm m-auto bg-[#a67d3d] bg-repeat bg-blend-multiply bg-opacity-50 from-amber-500 via-orange-700 to-transparent">
+        <div className="px-6">
+          <div className="flex min-h-svh flex-col justify-center">
+            <h1>Echo</h1>
+            <p>以书信的方式，投递文字的温度</p>
+            <Wishlist />
+          </div>
+        </div>
+      </div>
+    </section>
+
   )
 }
 
