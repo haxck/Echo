@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import Wishlist from './components/wishlist'
 
@@ -9,8 +8,10 @@ function App() {
       <div class="max-w-screen-sm m-auto ">
         <div className="px-6">
           <div className="flex min-h-svh flex-col justify-center">
-            <h1>Echo</h1>
-            <p>以书信的方式，投递文字的温度</p>
+            <div>
+              <h1>Echo</h1>
+              <p>以书信的方式，投递文字的温度</p>
+            </div>
             <Wishlist />
           </div>
         </div>

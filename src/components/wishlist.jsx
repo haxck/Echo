@@ -28,32 +28,34 @@ export default function Wishlist() {
   };
 
   return (
-    <div >
+    <div>
       <form onSubmit={handleSubmit}>
-
         <div class="w-full px-4 py-3 my-8 text-gray-600 rounded bg-white/30">
           <div class="py-3">
             <p>Echo 目前还在测试，留下邮箱，将在开放使用时通知您！</p>
           </div>
-          <div className="flex gap-2 py-3">
-            <input type="email"
+          <div className="w-full">
+            <input
+              type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="邮箱"
               required
-              class="inline-flex flex-1 text-base px-4 transition-all border rounded outline-none focus-visible:outline-none border-slate-200 text-slate-800  focus:outline-none invalid:focus:border-slate-300 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400" />
-            <button class="inline-flex px-4 text-sm font-medium transition duration-300 text-gray-800">
-              <span>提交</span>
-            </button>
+              class="p-3 w-full transition-all border rounded outline-none focus-visible:outline-none border-slate-200 text-slate-800 focus:outline-none invalid:focus:border-slate-300 disabled:cursor-not-allowed disabled:bg-slate-50 disabled:text-slate-400"
+            />
           </div>
+            <button class="mt-4 w-full font-medium transition duration-300 text-gray-800 ">
+              加入心愿单
+            </button>
         </div>
       </form>
       <div class="mt-4">
-            {data && <div class="px-4 py-2 w-full text-base border rounded border-emerald-100 bg-emerald-50 text-emerald-500" role="alert">
-              <span>{data}</span>
-            </div>}
+        {data && (
+          <div class="px-4 py-2 w-full text-base border rounded border-emerald-100 bg-emerald-50 text-emerald-500" role="alert">
+            <span>{data}</span>
           </div>
+        )}
+      </div>
     </div>
-
   );
 }
