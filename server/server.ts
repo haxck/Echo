@@ -5,7 +5,7 @@ const path = require("path")
 
 import { WishlistDatabase } from './db';
 
-const db = new WishlistDatabase('wish.db');
+const db = new WishlistDatabase('data/wish.db');
 
 app.use(express.static(path.join(__dirname, '../dist')))
 app.use(express.json()); // Middleware to parse JSON data
