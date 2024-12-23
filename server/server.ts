@@ -6,20 +6,23 @@ const path = require("path")
 import { WishlistDatabase } from './db';
 
 const db = new WishlistDatabase('data/wish.db');
+import wxbot from './wxhook'
 
 app.use(express.static(path.join(__dirname, '../dist')))
 app.use(express.json()); // Middleware to parse JSON data
 
 // respond with "hello world" when a GET request is made to the homepage
 app.get('/', (req, res) => {
-  const p = path.join(__dirname,"..","dist","index.html")
+  const p = path.join(__dirname, "..", "dist", "index.html")
   res.sendFile(p)
 })
 
 app.post('/api/wishlist', (req, res) => {
   const email = req.body.email; // Assuming the email is sent in the request body
   const ctime = new Date().toISOString(); // Current timestamp
-  console.log(email);
+
+
+  
 
   if (db.emailExists(email)) {
     return res.send({ message: "该邮箱已提交过心愿单" });
@@ -29,6 +32,7 @@ app.post('/api/wishlist', (req, res) => {
       if (!id) {
         return res.send({ message: "服务繁忙，请稍后重试" });
       }
+      wxbot(email);
       res.send({ message: "已加入心愿单" });
     } catch (error) {
       console.log(error);
@@ -38,5 +42,5 @@ app.post('/api/wishlist', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}`)
+  console.log(`app listening on http://localhost:${port}`)
 })
