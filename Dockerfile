@@ -9,4 +9,7 @@ RUN bun run build
 
 EXPOSE 1234
 
-CMD [ "bun", "/echo/server/server.ts"]
+ARG wxhook
+ENV wxhook=${wxhook}
+
+CMD ["bun", "/echo/server/server.ts"]
