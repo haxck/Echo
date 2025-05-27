@@ -1,23 +1,21 @@
 import './App.css'
-import Wishlist from './components/wishlist'
+import Post from './routers/post'
 
 function App() {
   return (
-
-    <section className='bg-[#a67d3d] bg-repeat bg-blend-multiply bg-opacity-50 from-amber-500 via-orange-700 to-transparent'>
-      <div class="max-w-screen-sm m-auto ">
-        <div className="px-6">
-          <div className="flex min-h-svh flex-col justify-center">
+    <div className='min-h-svh bg-[#a67d3d] bg-opacity-50 p-6 from-amber-500 via-orange-700 to-transparent'>
+      <section className='huiwen bg-repeat bg-blend-multiply '>
+        <div className="max-w-4xl m-auto ">
+          <div className="py-6">
             <div>
               <h1>Echo</h1>
               <p>以书信的方式，投递文字的温度</p>
             </div>
-            <Wishlist />
           </div>
         </div>
-      </div>
-    </section>
-
+      </section>
+      <Post />
+    </div>
   )
 }
 

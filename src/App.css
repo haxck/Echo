@@ -1,4 +1,5 @@
-@import url('https://static.zeoseven.com/zsft/440/main/result.css');
+@import url("https://fontsapi.zeoseven.com/282/main/result.css");
+@import url('https://fontsapi-storage.zeoseven.com/440/main/result.css');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,7 +10,6 @@ footer {
 }
 
 footer p {
-  text-align: center;
   color: #888;
   font-size:small;
 }
@@ -50,7 +50,21 @@ footer p {
 
 
 
-body {
+.huiwen {
    font-family: "Huiwen-Fangsong";
    font-weight: normal;
+}
+.xiaolai {
+   font-family: "Xiaolai Mono SC";
+   font-weight: normal;
+}
+.ql-align-center{
+  text-align: center;
+}
+
+.preview-image-root {
+  border-radius: 24px !important;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08) !important;
+  overflow: hidden !important;
+  background: #f4f1ec !important;
 }

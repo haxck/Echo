@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom/client'
 import { RouterProvider, createHashRouter } from "react-router-dom";
 
 import Root from './App'
-import Letter from './routers/letter'
+import Letter, { clientLoader } from './routers/letter'
 import './index.css'
 import ErrorPage from './routers/errorPage';
+import Post from './routers/post';
 
 const router = createHashRouter([
   {
@@ -13,7 +14,12 @@ const router = createHashRouter([
     element: <Root />,
   },
   {
+    path: "post",
+    element: <Post />,
+  },
+  {
     path: "s/:letterId",
+    loader: clientLoader,
     element: <Letter />,
     errorElement: <ErrorPage />
   },

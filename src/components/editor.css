@@ -1,0 +1,72 @@
+.ql-container {
+  border: 1px #ccc solid;
+  font-size: large;
+}
+
+.ql-editor {
+  min-height: calc(100vh - 280px);
+}
+
+.ql-toolbar {
+  position: sticky;
+  top: 52px;
+  z-index: 10;
+  background: #e3d9ca;
+}
+
+/* Font classes for Quill */
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="Huiwen"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="Huiwen"]::before {
+  content: "汇文明朝体";
+  font-family: "Huiwen-Fangsong";
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="xiaolai"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="xiaolai"]::before {
+  content: "小赖";
+  font-family: "Xiaolai Mono SC";
+}
+
+.ql-snow .ql-picker.ql-font .ql-picker-label[data-value="yahei"]::before,
+.ql-snow .ql-picker.ql-font .ql-picker-item[data-value="yahei"]::before {
+  content: '微软雅黑';
+  font-family: "Microsoft YaHei", "微软雅黑";
+}
+
+
+/* Apply fonts to editor content */
+.ql-font-Huiwen {
+  font-family: "Huiwen-Fangsong"
+}
+
+.ql-font-xiaolai {
+  font-family: "Xiaolai Mono SC";
+}
+.ql-font-yahei{
+  font-family: "Microsoft YaHei", "微软雅黑";
+}
+.ql-align-right{
+  text-align: right;
+}
+.ql-align-center{
+  text-align: center;
+}
+.letter-content p {
+  padding: 8px 0;
+}
+.letter-content img {
+  margin: 4px auto;
+  border: #ddd 1px solid;
+  border-radius: 6px;
+  padding: 6px;
+}
+.ql-editor img {
+  margin: 4px auto;
+  border: #ddd 1px solid;
+  border-radius: 6px;
+  padding: 6px;
+}
+
+.letter-content h2{
+  font-size: larger;
+}
